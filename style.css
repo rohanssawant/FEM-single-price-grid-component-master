@@ -1,0 +1,299 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+  */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* CSS reset code */
+
+body {
+  font-family: "Karla", sans-serif;
+  box-sizing: border-box;
+  background-color: hsl(204, 43%, 93%);
+}
+
+.container {
+  /* border: 1px solid red; */
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card-grid {
+  /* border: 1px solid blue; */
+  padding: 0.7rem;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+h1,
+h2,
+p,
+ul {
+  font-size: 1.7em;
+  font-weight: 700;
+  text-align: left;
+  padding: 10px 20px 15px;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.card:nth-of-type(1) {
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.h {
+  color: hsl(179, 62%, 43%);
+}
+
+h2 {
+  color: hsl(71, 73%, 54%);
+}
+p {
+  color: hsl(218, 22%, 67%);
+}
+.card:nth-of-type(2) {
+  background-color: hsl(179, 62%, 43%);
+  display: flex;
+  flex-direction: column;
+}
+
+.h-different h1 {
+  color: white;
+  /* border: 1px solid red; */
+  padding-bottom: 10px;
+  font-size: 1.7em;
+}
+
+span:nth-of-type(1) {
+  font-size: 1.7em;
+  font-weight: 700;
+  color: white;
+}
+span:nth-of-type(2) {
+  color: hsl(204, 43%, 93%);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.p-different p {
+  flex-grow: 1;
+  color: hsl(204, 43%, 93%);
+}
+
+.button {
+  border: 1px solid hsl(71, 73%, 54%);
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  margin: 20px;
+  background-color: hsl(71, 73%, 54%);
+  transition: 0.4s;
+  padding: 0.8em 3em;
+  border-radius: 0.4em;
+  box-shadow: 0.2em 0.4em 0.6em #00000014;
+}
+.button:hover {
+  background-color: white;
+  color: hsl(71, 73%, 54%);
+}
+
+.card:nth-of-type(3) {
+  background-color: hsl(179, 47%, 52%);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+ul {
+  font-size: 1em;
+  font-weight: 400;
+  text-align: left;
+}
+li {
+  list-style-type: none;
+  line-height: 1.5;
+  color: hsl(204, 43%, 93%);
+}
+
+footer {
+  /* border: 1px solid red; */
+  font-size: 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .container {
+    width: 60%;
+    height: 100vh;
+  }
+
+  .card-grid {
+    max-width: 80%;
+    /* centering */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-areas: "card1 card1" "card2 card3";
+  }
+  .card:nth-of-type(1) {
+    grid-area: card1;
+  }
+  .card:nth-of-type(2) {
+    grid-area: card2;
+    min-width: 360px;
+    border-bottom-left-radius: 5px;
+  }
+  .card:nth-of-type(3) {
+    grid-area: card3;
+    min-width: 360px;
+    border-bottom-left-radius: 0px;
+  }
+
+  h1 {
+    margin-top: 1em;
+  }
+
+  p {
+    /* border: 1px solid red; */
+    margin-bottom: 1.3em;
+  }
+}
